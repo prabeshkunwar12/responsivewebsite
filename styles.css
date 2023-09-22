@@ -1,0 +1,322 @@
+:root {
+    --white: #f3f0f0;
+    --yellow: #f5f54d;
+    --blue: #4f4fe9;
+    --grey:#bbb8b8;
+    --background: #050322;
+    --tile-background: linear-gradient(-45deg,#0a054d,#020114);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--background);
+}
+
+nav {
+    display:flex;
+    position:fixed;
+    justify-content: space-around;
+    top:0;
+    width:100%;
+    height:60px;
+    background: var(--background);
+}
+
+.section-header {
+    font-size: 2.3rem;
+    color:var(--white);
+    margin:20px 0;
+}
+
+section {
+   padding:60px 60px;
+}
+
+section p {
+    font-size:1.5rem;
+    color:var(--grey);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.logo {
+    left:10px;
+    top:10px;
+    position:absolute;
+    display:flex;
+    justify-content: space-around;
+}
+
+.name-title {
+    color:var(--white);
+    font-size:1.5rem;
+    margin:5px auto;
+    font-weight: bold;
+}
+
+.logo img {
+    height:30px;
+    margin: 0 20px;
+}
+
+nav ul {
+    display:flex;
+    justify-content: space-around;
+    position:absolute;
+    right:20px;
+    margin:5px;
+}
+
+nav ul li {
+    list-style: none;
+    margin:10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 1.5rem;
+}
+
+nav a:hover {
+    color:var(--white);
+}
+
+#welcome-section {
+    height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:radial-gradient(#010005 10%, #030011 20%, #06001b 30%,#0d012e 40%, #0c0031 50%, #010005 100%, #030011 90%, #06001b 80%,#0d012e 70%, #0d0030 60%);
+}
+
+#welcome-section h1 {
+    position: absolute;
+    top:30%;
+    font-size: 2.8rem;
+    color:var(--blue);
+}
+
+#welcome-section p {
+    position:relative;
+    top:-5%;
+    font-size:2rem;
+    color:var(--grey);
+    text-align:center;
+}
+
+#welcome-section span {
+    color:var(--white);
+}
+
+#introduction {
+    width:100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4);
+    grid-auto-rows: auto;
+    gap:20px;
+}
+
+.project-tile {
+    background: var(--tile-background);
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    transition: transform 0.5s ease-in-out 0ms;
+}
+
+.project-tile:hover {
+    transform: scale(1.2);
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: var(--grey);
+    justify-content: center;
+}
+
+.project-tile span{
+    font-size: 1.5rem;
+}
+
+.project-tile img{
+    width: 80%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    margin:10px auto;
+    border-radius:10px;
+}
+
+.contact.details {
+    display: flex;
+    justify-content: space-around;
+    font-size:1.3rem;
+}
+
+.contact.details a {
+    text-decoration: none;
+    color:var(--grey);
+    transition: transform 0.5s ease-in-out 0ms;
+}
+
+.contact.details a:hover {
+    color:var(--white);
+    transform:scale(1.2);
+}
+
+@media only screen and (max-width: 768px) {
+    .section-header {
+        font-size: 2rem;
+        color:var(--white);
+        margin:20px 0;
+        text-align: center;
+    }
+    
+    section {
+       padding:30px 30px;
+    }
+    
+    section p {
+        font-size:1.2rem;
+        color:var(--grey);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    nav {
+        display:flex;
+        position:fixed;
+        justify-content: space-around;
+        top:0;
+        width:100%;
+        height:50px;
+        background: var(--background);
+        z-index:10;
+    }
+
+    .logo {
+        width:0;
+        display:none;
+    }
+    
+    nav ul {
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        position:absolute;
+        margin:5px auto;
+
+    }
+    
+    nav ul li {
+        list-style: none;
+        margin:10px 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: var(--grey);
+        font-size: 1.2rem;
+    }
+    
+    nav a:hover {
+        color:var(--white);
+    }
+    
+    #welcome-section {
+        height:100vh;
+        width:100vw;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background:radial-gradient(#010005 10%, #030011 20%, #06001b 30%,#0d012e 40%, #0c0031 50%, #010005 100%, #030011 90%, #06001b 80%,#0d012e 70%, #0d0030 60%);
+    }
+    
+    #welcome-section h1 {
+        font-size: 2.5rem;
+        color:var(--blue);
+    }
+    
+    #welcome-section p {
+        font-size:1.5rem;
+        color:var(--grey);
+        text-align:center;
+    }
+    
+    #welcome-section span {
+        color:var(--white);
+    }
+    
+    #introduction {
+        width:100%;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4);
+        grid-auto-rows: auto;
+        gap:20px;
+    }
+    
+    .project-tile {
+        background: var(--tile-background);
+        border-radius: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+        transition: transform 0.5s ease-in-out 0ms;
+    }
+    
+    .project-tile:hover {
+        transform: scale(1.1);
+    }
+    
+    .project-tile a {
+        text-decoration: none;
+        color: var(--grey);
+        justify-content: center;
+    }
+    
+    .project-tile span{
+        font-size: 1.2rem;
+    }
+    
+    .project-tile img{
+        width: 80%;
+        height: 300px;
+        display: block;
+        object-fit: cover;
+        margin:10px auto;
+        border-radius:10px;
+    }
+    
+    .contact.details {
+        display: flex;
+        justify-content: space-around;
+        font-size:1rem;
+    }
+    
+    .contact.details a {
+        text-decoration: none;
+        color:var(--grey);
+        transition: transform 0.5s ease-in-out 0ms;
+    }
+    
+    .contact.details a:hover {
+        color:var(--white);
+        transform:scale(1.1);
+    }
+}
+
